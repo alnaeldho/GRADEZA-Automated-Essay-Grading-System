@@ -1,0 +1,35 @@
+{% extends 'user_template.html'  %}
+{% block content %}
+<div class="container">
+        <div class="row">
+            <div class="col">
+                    <H3>Essay Upload</H3>
+    
+            </div>
+        </div>
+        <div class="row">
+                   <div class="col">
+                        <form method="POST" action="/essay_upload" enctype="multipart/form-data">
+                            <table class="table">
+                                
+                                    <tr><td>Upload your file here!!</td><td>
+                            
+                                            <input type="file" class="form-control" name="filename" required/> 
+                                            
+                                        
+                                        </td></tr>
+                                <tr><td></td><td> <input type="submit" class="btn btn-primary" name="" value="Save" /> </td></tr>
+                            </table>
+                            </form>
+                                       
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col">
+                                
+    
+    
+    </div>
+    
+    
+{% endblock %}

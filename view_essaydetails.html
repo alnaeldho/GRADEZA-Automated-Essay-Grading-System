@@ -1,0 +1,33 @@
+{% extends 'user_template.html'  %}
+{% block content %}
+<!-- Card -->
+
+{% for item in employeeList %}
+<div class="card booking-card"></div>
+  <!-- Card image -->
+  <div class="view overlay">
+    
+    <a href="#!">
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
+
+  <!-- Card content -->
+  <div class="card-body">
+       
+    <!-- Title -->
+    <h4 class="card-title font-weight-bold"><a>{{item.topic}}</a></h4>
+    
+    <!-- Text -->
+    <p class="card-text">{{item.rules}}</p>
+    
+    <!-- Button -->
+    
+    <a href="view_essay_management?id={{item.id}}" class="btn btn-primary">PARTICIPATE NOW</a>
+    
+
+  </div>
+  {% endfor %}
+</div>
+<!-- Card -->
+{% endblock %}

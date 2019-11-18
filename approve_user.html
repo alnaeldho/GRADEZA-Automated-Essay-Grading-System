@@ -1,0 +1,27 @@
+{% extends 'admin_template.html'  %}
+{% block content %}
+
+<H3>Approve participant</H3>
+
+<table class="table table-striped">
+<thead>
+    <th>Id</th> <th>Name</th> <th>Gender</th>  <th>Email</th>  <th>Address</th>  <th>Qualification</th> <th>Institution</th>   <th>Date of Birth</th> <th>Action</th> 
+</thead>
+
+    {% for item in employeeList %}
+   <tr>
+       <td> {{item.id}}</td>
+       <td style="white-space: nowrap"> {{item.name}}</td>
+       <td> {{item.gender}}</td>    
+       <td style="width: 200px;"> {{item.emailid}}</td>
+       <td> {{item.address}}</td> 
+       <td> {{item.qualification}}</td>
+       <td> {{item.Institution}}</td>
+       <td  style="white-space: nowrap"> {{item.dateofbirth}}</td>
+       <td><a class="btn btn-primary" href="approve_users?id={{item.emailid}}">Approve</a> </td>     
+    </tr>
+   {% endfor %}
+</table>
+
+
+{% endblock %}
